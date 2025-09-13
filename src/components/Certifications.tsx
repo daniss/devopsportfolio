@@ -6,13 +6,13 @@ const certifications = [
     badge: "🎯",
     description: "Advanced Kubernetes administration and troubleshooting"
   },
-  {
-    name: "HashiCorp Certified: Terraform Associate",
-    issuer: "HashiCorp",
-    date: "2024",
-    badge: "🏗️",
-    description: "Infrastructure as Code with Terraform"
-  },
+//   {
+//     name: "HashiCorp Certified: Terraform Associate",
+//     issuer: "HashiCorp",
+//     date: "2024",
+//     badge: "🏗️",
+//     description: "Infrastructure as Code with Terraform"
+//   },
   {
     name: "Microsoft Azure Fundamentals",
     issuer: "Microsoft",
@@ -34,11 +34,11 @@ export const Certifications = () => (
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="flex flex-wrap justify-center gap-8">
         {certifications.map((cert) => (
           <div 
             key={cert.name} 
-            className="group bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+            className="group bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 w-full max-w-sm md:w-80"
           >
             <div className="p-6">
               {/* Badge */}

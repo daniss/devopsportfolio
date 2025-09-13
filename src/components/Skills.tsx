@@ -6,7 +6,7 @@ const techStack = [
   { category: "Monitoring & Observability", techs: ["Prometheus", "Grafana", "Azure Monitor"] },
   { category: "Security & Secrets", techs: ["Azure Key Vault", "RBAC", "tfsec", "TFLint", "Trivy"] },
   { category: "Containers", techs: ["Docker", "Docker Compose"] },
-  { category: "Programming & Scripting", techs: ["Python", "Bash", "YAML"] }
+  { category: "Programming & Scripting", techs: ["Python", "JavaScript", "Go", "Bash", "YAML"] }
 ];
 
 export const Skills = () => (
