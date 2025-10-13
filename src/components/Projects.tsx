@@ -15,18 +15,8 @@ const projects = [
   }
 ];
 
-const getStatusColor = (status: string) => {
-  switch (status) {
-    case 'Production': return 'bg-green-100 text-green-800';
-    case 'Active': return 'bg-blue-100 text-blue-800';
-    case 'Open Source': return 'bg-gray-100 text-gray-800';
-    case 'Development': return 'bg-yellow-100 text-yellow-800';
-    default: return 'bg-gray-100 text-gray-800';
-  }
-};
-
 export const Projects = () => (
-  <section className="py-20 px-4 md:px-8 bg-white">
+  <section id="projects" className="py-20 px-4 md:px-8 bg-white">
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
@@ -41,18 +31,18 @@ export const Projects = () => (
         {projects.map((project) => (
           <div 
             key={project.name} 
-            className="group bg-white rounded-xl p-6 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+            className="group flex flex-col bg-white rounded-xl p-6 border border-gray-200 hover:border-blue-400 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
           >
             <div className="flex justify-between items-start mb-4">
               <h3 className="text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
                 {project.name}
               </h3>
-              <span className={`px-3 py-1 text-xs font-semibold rounded-full ${getStatusColor(project.status)}`}>
+              <span className="px-4 py-1.5 text-sm font-bold rounded-full bg-blue-600 text-white shadow-md">
                 {project.status}
               </span>
             </div>
             
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
               {project.description}
             </p>
             

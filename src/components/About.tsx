@@ -20,7 +20,7 @@ const timeline = [
 ];
 
 export const About = () => (
-  <section className="py-20 px-4 md:px-8 bg-white">
+  <section id="about" className="py-20 px-4 md:px-8 bg-white">
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
@@ -32,7 +32,6 @@ export const About = () => (
       </div>
 
       <div className="grid lg:grid-cols-2 gap-12 items-center">
-        {/* Left side - Description */}
         <div>
           <div className="bg-gray-50 rounded-xl p-8 border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">
@@ -68,31 +67,25 @@ export const About = () => (
           </div>
         </div>
 
-        {/* Right side - Timeline */}
         <div>
           <h3 className="text-2xl font-bold text-gray-800 mb-8">Career Timeline</h3>
-          <div className="space-y-6">
-            {timeline.map((item, index) => (
+          <div className="space-y-8 relative">
+            <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gradient-to-b from-blue-600 via-blue-400 to-blue-300"></div>
+            
+            {timeline.map((item) => (
               <div key={item.year} className="relative">
-                {/* Timeline line */}
-                {index !== timeline.length - 1 && (
-                  <div className="absolute left-6 top-12 w-0.5 h-16 bg-blue-300"></div>
-                )}
-                
                 <div className="flex gap-4">
-                  {/* Timeline dot */}
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg z-10">
                     {item.year.slice(-2)}
                   </div>
                   
-                  {/* Content */}
-                  <div className="flex-1 bg-gray-50 rounded-lg p-4 border border-gray-200">
+                  <div className="flex-1 bg-white rounded-lg p-5 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
                     <div className="flex justify-between items-start mb-2">
                       <h4 className="text-lg font-bold text-gray-800">{item.title}</h4>
                       <span className="text-sm text-blue-600 font-semibold">{item.year}</span>
                     </div>
-                    <p className="text-blue-600 font-semibold mb-2">{item.company}</p>
-                    <p className="text-gray-600 text-sm">{item.description}</p>
+                    <p className="text-blue-700 font-bold text-lg mb-2">{item.company}</p>
+                    <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               </div>

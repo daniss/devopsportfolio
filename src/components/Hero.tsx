@@ -16,30 +16,29 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gray-50">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="text-center max-w-4xl mx-auto px-4">
         
-        {/* Terminal Window */}
-        <div className="bg-white rounded-lg shadow-lg border border-gray-200 mb-8">
-          <div className="flex items-center gap-2 px-4 py-3 bg-gray-100 rounded-t-lg border-b border-gray-200">
-            <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-            <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-            <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-            <span className="ml-2 text-gray-500 text-sm font-mono">terminal</span>
+        <div className="bg-gray-900 rounded-lg shadow-2xl border border-gray-700 mb-12">
+          <div className="flex items-center gap-2 px-4 py-3 bg-gray-800 rounded-t-lg border-b border-gray-700">
+            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+            <span className="ml-2 text-gray-400 text-sm font-mono">terminal</span>
           </div>
-          <div className="p-6 font-mono text-left">
-            <div className="text-blue-600 mb-2">{text}<span className="animate-pulse">|</span></div>
-            <div className="text-gray-800">
-              <span className="text-gray-600">Name:</span> Danis Cindrak<br/>
-              <span className="text-gray-600">Role:</span> DevOps Engineer<br/>
-              <span className="text-gray-600">Education:</span> 42 Student<br/>
-              <span className="text-gray-600">Experience:</span> LVMH Internship<br/>
-              <span className="text-gray-600">Status:</span> <span className="text-green-600">Available for opportunities</span>
+          <div className="p-8 font-mono text-left">
+            <div className="text-blue-400 mb-3 text-lg">{text}<span className="animate-pulse">|</span></div>
+            <div className="text-gray-300 leading-relaxed">
+              <span className="text-gray-500">Name:</span> Danis Cindrak<br/>
+              <span className="text-gray-500">Role:</span> DevOps Engineer<br/>
+              <span className="text-gray-500">Education:</span> 42 Student<br/>
+              <span className="text-gray-500">Experience:</span> LVMH Internship<br/>
+              <span className="text-gray-500">Status:</span> <span className="text-green-400">Available for opportunities</span>
             </div>
           </div>
         </div>
 
-        <h1 className="text-6xl md:text-7xl font-bold text-gray-800 mb-6">
+        <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-6">
           Danis Cindrak
         </h1>
         

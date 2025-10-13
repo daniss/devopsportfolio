@@ -6,8 +6,8 @@ export default function Home() {
       <main className="min-h-screen">
         <Hero />
         <Projects />
-        <Skills />
         <Certifications />
+        <Skills />
         <About />
         <Contact />
       </main>

@@ -1,45 +1,85 @@
 const techStack = [
-  { category: "Cloud Platforms", techs: ["Azure", "AWS"] },
-  { category: "Kubernetes & GitOps", techs: ["Kubernetes (AKS)", "Helm", "Argo CD", "K3s/K3d"] },
-  { category: "Infrastructure as Code", techs: ["Terraform (HCL)", "Ansible"] },
-  { category: "CI/CD & Quality", techs: ["GitHub Actions", "Azure DevOps", "SonarQube", "Playwright E2E"] },
-  { category: "Monitoring & Observability", techs: ["Prometheus", "Grafana", "Azure Monitor"] },
-  { category: "Security & Secrets", techs: ["Azure Key Vault", "RBAC", "tfsec", "TFLint", "Trivy"] },
-  { category: "Containers", techs: ["Docker", "Docker Compose"] },
-  { category: "Programming & Scripting", techs: ["Python", "JavaScript", "Go", "Bash", "YAML"] }
+  { 
+    category: "Cloud Platforms", 
+    icon: "☁️",
+    techs: ["Azure", "AWS"]
+  },
+  { 
+    category: "Kubernetes & Orchestration", 
+    icon: "⎈",
+    techs: ["Kubernetes (AKS)", "Helm", "Argo CD", "K3s/K3d"]
+  },
+  { 
+    category: "Infrastructure as Code", 
+    icon: "🏗️",
+    techs: ["Terraform (HCL)", "Ansible"]
+  },
+  { 
+    category: "CI/CD & Automation", 
+    icon: "🔄",
+    techs: ["GitHub Actions", "Azure DevOps", "SonarQube", "Playwright E2E"]
+  },
+  { 
+    category: "Monitoring & Observability", 
+    icon: "📊",
+    techs: ["Prometheus", "Grafana", "Azure Monitor"]
+  },
+  { 
+    category: "Security & Compliance", 
+    icon: "🔒",
+    techs: ["Azure Key Vault", "RBAC", "tfsec", "TFLint", "Trivy"]
+  },
+  { 
+    category: "Containers & Runtime", 
+    icon: "🐳",
+    techs: ["Docker", "Docker Compose"]
+  },
+  { 
+    category: "Programming & Scripting", 
+    icon: "💻",
+    techs: ["Python", "JavaScript", "Go", "Bash", "YAML"]
+  }
 ];
 
 export const Skills = () => (
-  <section className="py-20 px-4 md:px-8 bg-gray-50">
-    <div className="max-w-6xl mx-auto">
+  <section id="skills" className="py-20 px-4 md:px-8 bg-gray-50">
+    <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-          Skills & Technologies
+          Technical Skills
         </h2>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Expertise in cloud-native technologies, automation, and modern DevOps practices
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Building cloud-native infrastructure with modern DevOps tools and practices
         </p>
       </div>
 
-      {/* Tech Stack */}
-      <div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {techStack.map((category) => (
-            <div key={category.category} className="bg-white rounded-lg p-6 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
-              <h4 className="text-lg font-bold text-blue-600 mb-4">{category.category}</h4>
-              <div className="flex flex-wrap gap-2">
-                {category.techs.map((tech) => (
-                  <span 
-                    key={tech}
-                    className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full border border-gray-200 hover:border-blue-300 hover:text-blue-600 transition-colors cursor-default"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {techStack.map((category) => (
+          <div 
+            key={category.category} 
+            className="group relative rounded-xl p-6 border-2 bg-blue-50 border-blue-200 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-100 transition-all duration-300 hover:-translate-y-1"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-4xl text-blue-600">
+                {category.icon}
+              </span>
+              <h3 className="text-lg font-bold text-blue-800">
+                {category.category}
+              </h3>
             </div>
-          ))}
-        </div>
+            
+            <div className="flex flex-wrap gap-2">
+              {category.techs.map((tech) => (
+                <span 
+                  key={tech}
+                  className="px-3 py-1 text-sm font-medium rounded-lg border bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200 transition-all duration-200"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </section>
