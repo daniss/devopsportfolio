@@ -24,14 +24,14 @@ const techStack = [
     techs: ["GitHub Actions", "Azure DevOps", "Playwright"]
   },
   {
-    category: "Observability",
+    category: "Monitoring & Observability",
     icon: <Activity className="w-6 h-6" />,
-    techs: ["Prometheus", "Grafana", "Azure Monitor"]
+    techs: ["OpenTelemetry", "Prometheus", "Grafana"]
   },
   {
     category: "Security & Compliance",
     icon: <Shield className="w-6 h-6" />,
-    techs: ["Key Vault", "RBAC"]
+    techs: ["HashiCorp Vault", "Key Vault", "RBAC"]
   },
   {
     category: "Containers",
