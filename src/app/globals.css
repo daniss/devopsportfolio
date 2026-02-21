@@ -5,8 +5,12 @@ html {
 }
 
 body {
-  background: #f9fafb;
-  color: #1f2937;
+  background: #020617; /* slate-950 */
+  background-image: 
+    radial-gradient(at 0% 0%, #0e749022 0px, transparent 50%),
+    radial-gradient(at 100% 0%, #04785722 0px, transparent 50%);
+  background-attachment: fixed;
+  color: #f8fafc;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   overflow-x: hidden;
 }
@@ -17,14 +21,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f3f4f6;
+  background: #0f172a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #9ca3af;
+  background: #334155;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
+  background: #10b981;
 }

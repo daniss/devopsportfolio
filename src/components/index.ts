@@ -4,3 +4,4 @@ export * from './Skills';
 export * from './Certifications';
 export * from './About';
 export * from './Contact';
+export * from './Navbar';
